@@ -1,0 +1,45 @@
+We want to develop a stock management application to meet the needs of our clients.
+
+This application allows:
+	-Creating profiles for each company.
+	-A company can have one or more users.
+	-Configuring product categories (items).
+	-A company can have one or more items (products).
+	-A company can have one or more clients, suppliers, 
+
+	-Managing customer orders:
+
+	      -A customer order is associated with a single client.
+	      -A customer order can contain one or more items (products).
+	      -A customer order results in a stock reduction for the specific items.
+	
+	-Managing supplier orders:
+	      -A Supplier order is associated with a single Supplier.
+	      -A Supplier order can contain one or more items (products).
+	      -A Supplier order results in a stock enter for the specific items.
+
+	-Making sales in the store:
+	        - Sale has one or more item (product)
+	        - a sale affect an out of stock for the specific items
+
+	-Viewing the stock status of each items:
+		- check the quantity of the items in real time
+		- affect a correction for the stock (update the stock)
+	
+	- send automatically emails to the suppliers when the create a new command base on pre-defined template
+	- be able to send a confirmation mail to the client that he create a command based on pre-defined template
+	
+	- show a notification while a product reach the min of the stock
+	
+	- show a dashboard that shows the stats  => stats about sells
+	
+	- offer a dashboard to manage users for the company
+	
+	-show the state of the command (delivered , en stock etc ..)
+	
+	- offer a history of commands for clients and  suppliers
+	 
+	 - offer a search with client article ...
+	 
+	 
+=> application need to be secured and authenticated

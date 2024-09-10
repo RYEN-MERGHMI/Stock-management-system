@@ -1,0 +1,18 @@
+Roadmap:
+Backend
+	-Design (UML, class diagram)
+	-Create a Spring Boot project
+	-Configure the project
+	-Manage entities and services
+	-Configure Swagger (API documentation)
+	-Generate Swagger.json -> Generate services and models for the front-end application
+
+Frontend:
+	- create an Angular project
+	-make the application as components
+	- create the components
+	- create the services 
+	- create the interfaces
+
+First cession:
+1- Design Uml , and  the class diagram
