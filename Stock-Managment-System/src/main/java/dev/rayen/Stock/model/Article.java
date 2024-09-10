@@ -8,8 +8,10 @@
 package dev.rayen.Stock.model;
 
 import jakarta.persistence.*;
-import lombok.*;
-import org.apache.catalina.LifecycleState;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.util.List;

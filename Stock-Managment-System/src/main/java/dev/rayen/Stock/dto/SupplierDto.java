@@ -38,7 +38,7 @@ public class SupplierDto {
     @JsonIgnore
     private List<OrderSupplierDto> orderSuppliers;
 
-    private static SupplierDto fromEntity(Supplier supplier){
+    public static SupplierDto fromEntity(Supplier supplier){
         if(supplier == null){
             return null;
         }
@@ -54,7 +54,7 @@ public class SupplierDto {
                 .build();
     }
 
-    private static Supplier toEntity(SupplierDto supplierDto){
+    public static Supplier toEntity(SupplierDto supplierDto){
 
         if (supplierDto == null){
             return null;
