@@ -35,4 +35,8 @@ public class SupplierCodeLine extends AbstractEntity{
     @Column(name = "prixunitaire")
     private BigDecimal prixUnitaire;
 
+
+    @Column(name = "idCompany")
+    private Integer idCompany;
+
 }

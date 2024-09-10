@@ -7,6 +7,7 @@
 
 package dev.rayen.Stock.dto;
 
+import dev.rayen.Stock.model.SupplierCodeLine;
 import lombok.Builder;
 import lombok.Data;
 
@@ -30,6 +31,36 @@ public class SupplierCodeLineDto {
     private BigDecimal prixUnitaire;
 
     private Integer idCompany;
+
+    public static SupplierCodeLineDto fromEntity(SupplierCodeLine supplierCodeLine){
+
+
+        if(supplierCodeLine == null){
+            return null;
+        }
+        return SupplierCodeLineDto.builder()
+                .id(supplierCodeLine.getId())
+                .article(ArticleDto.fromEntity(supplierCodeLine.getArticle()))
+                .orderSuppliers(OrderSupplierDto.fromEntity(supplierCodeLine.getOrderSuppliers()))
+                .quantity(supplierCodeLine.getQuantity())
+                .prixUnitaire(supplierCodeLine.getPrixUnitaire())
+                .idCompany(supplierCodeLine.getIdCompany())
+                .build();
+
+    }
+
+    public static SupplierCodeLine toEntity(SupplierCodeLineDto supplierCodeLineDto){
+        if(supplierCodeLineDto == null){
+            return null;
+        }
+       SupplierCodeLine supplierCodeLine = new SupplierCodeLine();
+        supplierCodeLine.setId(supplierCodeLineDto.getId());
+        supplierCodeLine.setArticle(ArticleDto.toEntity(supplierCodeLineDto.getArticle()));
+        supplierCodeLine.setPrixUnitaire(supplierCodeLineDto.getPrixUnitaire());
+        supplierCodeLine.setQuantity(supplierCodeLineDto.getQuantity());
+        supplierCodeLine.setIdCompany(supplierCodeLineDto.getIdCompany());
+        return supplierCodeLine;
+    }
 
 }
 
