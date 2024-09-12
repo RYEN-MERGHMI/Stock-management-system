@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface ArticleRepository  extends JpaRepository<Integer, Article> {
+public interface ArticleRepository  extends JpaRepository<Article, Integer> {
 
-
+    Article findArticleByCodeArticle(String codeArticle);
 }
