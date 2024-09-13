@@ -28,9 +28,19 @@ public class CompanyValidator {
         if (!StringUtils.hasLength(companyDto.getName())) {
             errors.add("reenter the name of the company");
         }
+        if(!StringUtils.hasLength(companyDto.getDescription())){
+            errors.add("reenter the description of the company");
+        }
         if (!StringUtils.hasLength(companyDto.getCodeFiscal())) {
             errors.add("reenter the fiscal code of th company");
         }
+        if(!StringUtils.hasLength(companyDto.getEmail())){
+            errors.add("reenter email of the company");
+        }
+        if(!StringUtils.hasLength(companyDto.getPhoneNumber())){
+            errors.add("reenter phone number of the company");
+        }
+        return errors;
     }
 }
 // TODO :

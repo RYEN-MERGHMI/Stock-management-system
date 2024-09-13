@@ -10,5 +10,5 @@ package dev.rayen.Stock.repository;
 import dev.rayen.Stock.model.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UsersRepository extends JpaRepository <Integer, Users>{
+public interface UsersRepository extends JpaRepository <Users, Integer>{
 }

@@ -70,14 +70,13 @@ public class ArticleServiceImpl implements ArticleService {
             log.error("Article code is null");
             return null;
         }
-
-        Optional<Article> article = Optional.ofNullable(articleRepository.findArticleByCodeArticle(codeArticle));
-
-        return Optional.of(ArticleDto.fromEntity(article.get())).orElseThrow(() ->
-                new EntityNotFoundException(
-                        "no article found with code article " + codeArticle + " in our database",
-                        ErrorCodes.ARTICLE_NOT_FOUND)
-        );
+        return articleRepository.findArticleByCodeArticle(codeArticle)
+                .map(ArticleDto::fromEntity)
+                .orElseThrow(() ->
+                        new EntityNotFoundException(
+                                "no article with code " + codeArticle + " in our database",
+                                ErrorCodes.ARTICLE_NOT_FOUND
+                        ));
     }
 
     @Override
