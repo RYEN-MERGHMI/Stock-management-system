@@ -10,5 +10,5 @@ package dev.rayen.Stock.repository;
 import dev.rayen.Stock.model.Roles;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface RoleRepository extends JpaRepository<Integer, Roles> {
+public interface RolesRepository extends JpaRepository<Integer, Roles> {
 }

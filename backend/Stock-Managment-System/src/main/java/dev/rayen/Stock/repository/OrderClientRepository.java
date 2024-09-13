@@ -10,5 +10,12 @@ package dev.rayen.Stock.repository;
 import dev.rayen.Stock.model.OrderClient;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface OrderClientRepository extends JpaRepository<Integer, OrderClient> {
+import java.util.List;
+import java.util.Optional;
+
+public interface OrderClientRepository extends JpaRepository<OrderClient, Integer> {
+
+    Optional<OrderClient> findCommandeClientByCode(String code);
+
+    List<OrderClient> findAllByClientId(Integer id);
 }
