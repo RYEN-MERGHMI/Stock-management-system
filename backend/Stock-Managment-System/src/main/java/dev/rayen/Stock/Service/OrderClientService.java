@@ -11,7 +11,7 @@ public interface OrderClientService {
 
     OrderClientDto findById(Integer id);
 
-    OrderClientDto findByCode(String code);
+//    OrderClientDto findByCode(String code);
 
     List<OrderClientDto> findAll();
 
