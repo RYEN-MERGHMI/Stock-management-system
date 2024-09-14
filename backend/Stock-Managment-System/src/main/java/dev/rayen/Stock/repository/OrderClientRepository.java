@@ -15,7 +15,7 @@ import java.util.Optional;
 
 public interface OrderClientRepository extends JpaRepository<OrderClient, Integer> {
 
-    Optional<OrderClient> findCommandeClientByCode(String code);
+    Optional<OrderClient> findOrderClientByCode(String code);
 
     List<OrderClient> findAllByClientId(Integer id);
 }

@@ -32,7 +32,7 @@ public class ClientCodeLineDto {
 
     private Integer idCompany;
 
-    private static ClientCodeLineDto fromEntity(ClientCodeLine clientCodeLine) {
+    public static ClientCodeLineDto fromEntity(ClientCodeLine clientCodeLine) {
         if(clientCodeLine == null) return null;
         // todo handle exception
 
@@ -45,7 +45,7 @@ public class ClientCodeLineDto {
                 .build();
     }
 
-    private static ClientCodeLine toEntity(ClientCodeLineDto clientCodeLineDto) {
+    public static ClientCodeLine toEntity(ClientCodeLineDto clientCodeLineDto) {
         if(clientCodeLineDto == null) return null;
         // todo handle exception
 
