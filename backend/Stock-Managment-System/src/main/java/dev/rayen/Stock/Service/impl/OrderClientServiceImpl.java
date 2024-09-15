@@ -149,8 +149,8 @@ public class OrderClientServiceImpl implements OrderClientService {
             log.error("Commande client ID is NULL");
             return;
         }
-        List<ClientCodeLine> ligneCommandeClients = clientCodeLineRepository.findAllByOrderClientId(id);
-        if (!ligneCommandeClients.isEmpty()) {
+        List<ClientCodeLine> ClientCodeLine = clientCodeLineRepository.findAllByOrderClientId(id);
+        if (!ClientCodeLine.isEmpty()) {
             throw new InvalidOperationException("Impossible de supprimer une commande client deja utilisee",
                     ErrorCodes.ORDER_CLIENT_ALREADY_IN_USE);
         }
